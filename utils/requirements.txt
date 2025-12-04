@@ -1,4 +1,9 @@
 google-cloud-storage  # For interacting with GCS
 google-cloud-bigquery  # For BigQuery operations
 google-cloud-dataproc  # For Dataproc cluster and job management
-google-cloud-composer  # For Workflow Orchestration
+# Libraries needed for the 'add_dags_to_composer.py' script (run in Cloud Build)
+google-cloud-storage
+
+# Libraries needed for your DAGs to run successfully in Cloud Composer
+apache-airflow-providers-google  # Includes operators for BigQuery, Dataproc, etc.
+# Add any other libraries imported by your DAG files (e.g., pandas, requests, etc.)
