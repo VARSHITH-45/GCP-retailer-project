@@ -36,7 +36,7 @@ with DAG(
     # Task to trigger BigQuery DAG
     trigger_bigquery_dag = TriggerDagRunOperator(
         task_id="trigger_bigquery_dag",
-        trigger_dag_id="bigquery_dag",
+        trigger_dag_id="bq_dag",
         wait_for_completion=True,
     )
 
