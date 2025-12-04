@@ -1,5 +1,6 @@
 # GCP-retailer-project
-															                                                   **Building a Retailer Data Lake**
+
+**Building a Retailer Data Lake**
                                                                                  
 **Introduction**
 	In the modern retail industry, managing and analyzing large volumes of data is essential for staying competitive. A data lake provides a centralized repository to store, process, and analyze vast amounts of structured and unstructured data efficiently. 
@@ -8,10 +9,10 @@
 	A data lake enables retailers to store and analyze data efficiently, unlocking valuable insights for business growth. 
 	
 	Key benefits include:
-			§ Centralized Data Access: Provides a single repository for all retailer data, accessible across departments.
-			§ Scalability: Handles large volumes of data seamlessly without performance issues.
-			§ Data Flexibility: Supports multiple data formats (structured, semi-structured, unstructured) and various query engines.
-			§ Advanced Analytics & AI: Empowers businesses to perform deep analytics, uncover trends, and enhance decision-making.
+			. Centralized Data Access: Provides a single repository for all retailer data, accessible across departments.
+			. Scalability: Handles large volumes of data seamlessly without performance issues.
+			. Data Flexibility: Supports multiple data formats (structured, semi-structured, unstructured) and various query engines.
+			. Advanced Analytics & AI: Empowers businesses to perform deep analytics, uncover trends, and enhance decision-making.
 
 **Data Sources**
 
@@ -37,16 +38,16 @@
 **Data Landing in GCS**
 	Once extracted, the data is landed in Google Cloud Storage (GCS) under separate folders for easy organization:
 
-			§ retailer-db (Retailer-related data)
-			§ supplier-db (Supplier-related data)
-			§ customer_reviews (Reviews data from APIs)
+			. retailer-db (Retailer-related data)
+			. supplier-db (Supplier-related data)
+			. customer_reviews (Reviews data from APIs)
 		
 **Data Analysis in BigQuery**
 	The data moves from GCS to BigQuery using the Medallion Architecture, which consists of three layers:
 
-			§ Bronze Layer: Raw data from GCS is ingested into BigQuery as-is, without transformations.
-			§ Silver Layer: Data is cleaned, standardized, and transformed to improve quality.
-			§ Gold Layer: Final, business-ready tables are created for analytics and reporting.
+			. Bronze Layer: Raw data from GCS is ingested into BigQuery as-is, without transformations.
+			. Silver Layer: Data is cleaned, standardized, and transformed to improve quality.
+			. Gold Layer: Final, business-ready tables are created for analytics and reporting.
 			
 
 **Workflow Orchestration with Airflow**
